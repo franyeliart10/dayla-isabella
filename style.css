@@ -163,6 +163,7 @@ body.locked {
   font-size: 11px;
   letter-spacing: 6px;
   color: var(--tinta);
+   transform: translateY (-35px);
 
   margin-bottom: 15px;
 }
