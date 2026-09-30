@@ -133,7 +133,7 @@ body.locked {
 .cover__bow {
   display: block;
 
-  width: min(680px, 120vw);
+  width: min(190px, 65vw);
   max-height: none;
 
   object-fit: contain;
