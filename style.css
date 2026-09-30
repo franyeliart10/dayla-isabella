@@ -132,7 +132,7 @@ body.locked {
   width: min(330px, 82vw);
   height: auto;
 
-  top: 40px;
+  top: 20px;
   left: 50%;
 
   transform: translateX(-50%);
@@ -1341,7 +1341,7 @@ section {
 
   .cover__bow {
     width: 290px;
-    top: 40px;
+    top: 20px;
   }
 
   .cover__name {
