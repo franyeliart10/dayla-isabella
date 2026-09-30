@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    CONFIGURACIÓN
    ========================================================= */
 
@@ -556,6 +556,43 @@ if (musicButton) {
 
   musicButton.classList.remove(
     "visible"
+  );
+
+}
+/* =========================================================
+   INDICADOR DE MÚSICA DE LA PORTADA
+   ========================================================= */
+
+const musicHint =
+  document.getElementById("musicHint");
+
+
+if (musicHint) {
+
+  musicHint.addEventListener(
+    "click",
+    async () => {
+
+      if (!backgroundMusic) {
+        return;
+      }
+
+      try {
+
+        await backgroundMusic.play();
+
+        setMusicState(true);
+
+      } catch (error) {
+
+        console.log(
+          "No fue posible reproducir la música.",
+          error
+        );
+
+      }
+
+    }
   );
 
 }
