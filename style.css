@@ -1363,3 +1363,82 @@ section {
     height: 68px;
   }
 }
+/* =========================================================
+   PORTADA — LAZO GRANDE DETRÁS DEL NOMBRE
+   ========================================================= */
+
+.cover__content {
+  position: relative;
+  z-index: 3;
+}
+
+/* El lazo queda centrado y detrás de las letras */
+.cover__bow {
+  position: absolute;
+
+  width: min(330px, 82vw);
+  height: auto;
+
+  top: 105px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 1;
+
+  margin: 0;
+
+  opacity: 1;
+
+  filter:
+    drop-shadow(0 10px 15px rgba(77, 37, 48, .14));
+
+  animation: bowFloatCentered 4s ease-in-out infinite;
+}
+
+/* El texto queda por encima del lazo */
+.cover__name,
+.cover__surname,
+.cover__surname--second,
+.cover__kicker,
+.cover__pearls,
+.cover__phrase,
+.cover__date,
+.open-button {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* El nombre empieza aproximadamente en el centro del lazo */
+.cover__name {
+  margin-top: 135px;
+}
+
+
+/* Animación sin que el lazo se vaya hacia los lados */
+@keyframes bowFloatCentered {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+}
+
+
+/* Ajuste para celulares */
+@media (max-width: 480px) {
+
+  .cover__bow {
+    width: min(310px, 86vw);
+    top: 105px;
+  }
+
+  .cover__name {
+    margin-top: 130px;
+  }
+
+}
