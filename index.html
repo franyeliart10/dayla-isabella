@@ -2,663 +2,507 @@
 <html lang="es">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <meta charset="utf-8">
+  <title>Dayla Isabella · Mis XV</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
-    
-    <meta
-        name="theme-color"
-        content="#7a1024"
-    >
-
-    <title>Dayla Isabella · Mis XV</title>
-
-    <!-- FUENTES ORIGINALES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
+<body class="locked">
 
-<body>
+  <!-- =====================================================
+       PORTADA / PANTALLA DE ENTRADA
+       ===================================================== -->
 
-<main class="page">
+  <div class="cover" id="cover">
+
+    <div class="cover__decor cover__decor--left"></div>
+    <div class="cover__decor cover__decor--right"></div>
+
+    <div class="cover__content">
+
+      <div class="cover__kicker">
+        MIS XV AÑOS
+      </div>
+
+      <img
+        class="cover__bow"
+        src="images/lazo-principal.png"
+        alt=""
+      >
+
+      <div class="cover__name">
+        DAYLA
+      </div>
+
+      <div class="cover__surname">
+        Isabella
+      </div>
+
+      <div class="cover__surname--second">
+        BATISTA OROZCO
+      </div>
+
+      <div class="cover__pearls">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="cover__phrase">
+        UNA NOCHE PARA ATESORAR POR SIEMPRE
+      </div>
+
+      <div class="cover__date">
+        13 · DICIEMBRE · 2026
+      </div>
+
+      <button
+        class="open-button"
+        id="openInvitation"
+        type="button"
+      >
+        ABRIR INVITACIÓN
+      </button>
+    </div>
+  </div>
 
 
-    <!-- =========================================
-         BORDE SUPERIOR
-         ========================================= -->
+  <!-- =====================================================
+       INVITACIÓN
+       ===================================================== -->
+
+  <main class="page invitation" id="invitation">
 
     <div class="ribbon"></div>
 
 
-    <!-- =========================================
-         HERO
-         ========================================= -->
+    <!-- ===================================================
+         HERO ORIGINAL
+         =================================================== -->
 
     <header class="hero">
 
-        <div class="hero__decor hero__decor--left"></div>
-        <div class="hero__decor hero__decor--right"></div>
+      <div class="hero__content">
 
-        <div class="hero__content">
+        <img
+          class="bow-image bow-image--hero"
+          src="images/lazo-principal.png"
+          alt=""
+        >
 
-            <div class="hero__kicker">
-                MIS XV AÑOS
-            </div>
-
-
-            <div class="hero__name-wrap">
-
-                <div class="hero__dayla">
-                    DAYLA
-                </div>
-
-                <div class="hero__isabella">
-                    Isabella
-                </div>
-
-            </div>
-
-
-            <div class="hero__surname">
-                BATISTA OROZCO
-            </div>
-
-
-            <div class="pearls">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
-
-
-            <div class="hero__phrase">
-                UNA NOCHE PARA ATESORAR POR SIEMPRE
-            </div>
-
-
-            <!-- MÚSICA -->
-
-            <div
-                class="music-player"
-                id="musicPlayer"
-                role="button"
-                tabindex="0"
-                aria-label="Reproducir música"
-            >
-
-                <div class="music-disc">
-
-                    <div class="music-disc__center">
-                        ♫
-                    </div>
-
-                </div>
-
-                <div class="music-player__text">
-                    TOCA PARA ESCUCHAR
-                </div>
-
-            </div>
-
-
-            <audio
-                id="bgMusic"
-                loop
-                preload="auto"
-            >
-
-                <source
-                    src="music/musica.mp3"
-                    type="audio/mpeg"
-                >
-
-            </audio>
-
-
-            <div class="hero__date">
-                13 · DICIEMBRE · 2026
-            </div>
-
+        <div class="kicker">
+          MIS XV AÑOS
         </div>
+
+        <div class="dayla">
+          DAYLA
+        </div>
+
+        <div class="isabella">
+          Isabella
+        </div>
+
+        <div class="xv hero-last-name">
+          BATISTA OROZCO
+        </div>
+
+        <div class="pearls">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+        <div class="tag">
+          UNA NOCHE PARA ATESORAR POR SIEMPRE
+        </div>
+
+<div class="music-player" id="musicPlayer">
+  <div class="music-disc">
+    <div class="music-disc__center">
+    </div>
+  </div>
+
+  <div class="music-player__text">
+    TOCA PARA ESCUCHAR
+  </div>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="music/musica.mp3" type="audio/mpeg">
+</audio>
+
+        <div class="date">
+          13 · DICIEMBRE · 2026
+        </div>
+      </div>
 
     </header>
 
 
+    <!-- ===================================================
+         CELEBRACIÓN
+         =================================================== -->
 
-    <!-- =========================================
-         SECCIÓN 1
-         UNA CELEBRACIÓN ESPECIAL
-         ========================================= -->
+    <section class="reveal-section">
 
-    <section class="celebration">
+      <img
+        class="bow-image"
+        src="images/lazo-1.png"
+        alt=""
+      >
 
-        <div class="floating-detail floating-detail--one">
-            ✦
+      <h2 class="title">
+        UNA CELEBRACIÓN ESPECIAL
+      </h2>
+
+      <div class="box">
+
+        <p class="copy">
+          Hay momentos únicos que permanecen para siempre
+          en el corazón.
+        </p>
+
+        <p class="copy">
+          Con la bendición de Dios y el amor de mi familia,
+          tengo el honor de invitarte a celebrar uno de los
+          días más especiales de mi vida:
+        </p>
+
+        <div class="script">
+          Mis XV años
         </div>
 
-        <div class="section-inner">
+        <p class="copy celebration-last">
+          Será un privilegio contar con tu presencia y
+          compartir una noche colmada de alegría y
+          recuerdos inolvidables.
+        </p>
 
+      </div>
 
-            <div class="section-intro">
-
-                <div class="mini-ornament">
-                    <span></span>
-                </div>
-
-                <div class="section-number">
-                    01
-                </div>
-
-                <h2 class="title">
-                    UNA CELEBRACIÓN
-                    <span>ESPECIAL</span>
-                </h2>
-
-            </div>
-
-
-            <div class="celebration-card">
-
-                <div class="card-corner card-corner--tl"></div>
-                <div class="card-corner card-corner--br"></div>
-
-
-                <p class="copy">
-                    Hay momentos únicos que permanecen
-                    para siempre en el corazón.
-                </p>
-
-
-                <p class="copy">
-                    Con la bendición de Dios y el amor
-                    de mi familia, tengo el honor de
-                    invitarte a celebrar uno de los días
-                    más especiales de mi vida:
-                </p>
-
-
-                <div class="script">
-                    Mis XV años
-                </div>
-
-
-                <div class="thin-line"></div>
-
-
-                <p class="copy">
-                    Será un privilegio contar con tu
-                    presencia y compartir una noche
-                    colmada de alegría y recuerdos
-                    inolvidables.
-                </p>
-
-            </div>
-
-
-            <p class="note">
-                GRACIAS POR SER PARTE DE ESTE
-                CAPÍTULO TAN ESPECIAL ♡
-            </p>
-
-        </div>
+      <p class="note">
+        GRACIAS POR SER PARTE DE ESTE CAPÍTULO TAN ESPECIAL ♡
+      </p>
 
     </section>
 
 
+    <!-- ===================================================
+         EVENTO
+         =================================================== -->
 
-    <!-- =========================================
-         SECCIÓN 2
-         EL EVENTO
-         ========================================= -->
+    <section class="wine reveal-section">
 
-    <section class="wine event-section">
+      <h2 class="title">
+        EL EVENTO
+      </h2>
 
-        <div class="section-inner">
+      <div class="details">
 
+        <div class="card">
 
-            <div class="section-intro section-intro--light">
+          <div class="detail-icon">
+            ▣
+          </div>
 
-                <div class="section-number">
-                    02
-                </div>
+          <div class="label">
+            FECHA
+          </div>
 
-                <h2 class="title">
-                    EL EVENTO
-                </h2>
-
-            </div>
-
-
-            <div class="event-editorial">
-
-
-                <!-- FECHA -->
-
-                <div class="event-block">
-
-                    <div class="event-icon">
-                        01
-                    </div>
-
-                    <div class="event-label">
-                        FECHA
-                    </div>
-
-                    <div class="event-value">
-                        Domingo
-                    </div>
-
-                    <div class="event-main">
-                        13
-                    </div>
-
-                    <div class="event-small">
-                        de diciembre · 2026
-                    </div>
-
-                </div>
-
-
-                <div class="event-divider"></div>
-
-
-                <!-- HORA -->
-
-                <div class="event-block">
-
-                    <div class="event-icon">
-                        02
-                    </div>
-
-                    <div class="event-label">
-                        HORA
-                    </div>
-
-                    <div class="event-value">
-                        7:30
-                    </div>
-
-                    <div class="event-main event-main--small">
-                        p. m.
-                    </div>
-
-                    <div class="event-small">
-                        Te esperamos
-                    </div>
-
-                </div>
-
-
-                <div class="event-divider"></div>
-
-
-                <!-- LUGAR -->
-
-                <div class="event-block">
-
-                    <div class="event-icon">
-                        03
-                    </div>
-
-                    <div class="event-label">
-                        LUGAR
-                    </div>
-
-                    <div class="event-value">
-                        Plaza Hollywood
-                    </div>
-
-                    <div class="event-small">
-                        Calle Catalina Fernández #7
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <a
-                class="text-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.google.com/maps/search/?api=1&query=Plaza+Hollywood+Calle+Catalina+Fernandez+7+Santo+Domingo"
-            >
-                <span>⌖</span>
-                VER UBICACIÓN EN GOOGLE MAPS
-                <span>→</span>
-            </a>
+          <div class="value">
+            Domingo<br>
+            13 de diciembre<br>
+            2026
+          </div>
 
         </div>
+
+
+        <div class="card">
+
+          <div class="detail-icon">
+            ◷
+          </div>
+
+          <div class="label">
+            HORA
+          </div>
+
+          <div class="value">
+            7:30 p. m.
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="detail-icon">
+            ⌖
+          </div>
+
+          <div class="label">
+            LUGAR
+          </div>
+
+          <div class="value">
+            Plaza Hollywood<br>
+            Calle Catalina Fernández #7
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <a
+        class="btn btn-light"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.google.com/maps/search/?api=1&query=Plaza+Hollywood+Calle+Catalina+Fernandez+7+Santo+Domingo"
+      >
+        ⌖ VER UBICACIÓN EN GOOGLE MAPS
+      </a>
 
     </section>
 
 
-
-    <!-- =========================================
-         SECCIÓN 3
+    <!-- ===================================================
          CÓDIGO DE VESTIMENTA
-         ========================================= -->
+         =================================================== -->
 
-    <section class="dress-section">
+    <section class="reveal-section">
 
-        <div class="section-inner">
+      <div class="ornament">
+        <span></span>
+      </div>
 
+      <img
+        class="bow-image"
+        src="images/lazo-2.png"
+        alt=""
+      >
 
-            <div class="section-intro">
+      <h2 class="title">
+        CÓDIGO DE VESTIMENTA
+      </h2>
 
-                <div class="mini-ornament">
-                    <span></span>
-                </div>
+      <div class="script">
+        Elegante formal
+      </div>
 
-                <div class="section-number">
-                    03
-                </div>
+      <div class="dress-grid">
 
-                <h2 class="title">
-                    CÓDIGO DE
-                    <span>VESTIMENTA</span>
-                </h2>
+        <div class="dress-card">
 
-                <div class="script">
-                    Elegante formal
-                </div>
+          <h3>
+            Caballeros
+          </h3>
 
-            </div>
+          <p>
+            Camisa o chacabana acompañada de pantalón
+            de vestir.
+          </p>
 
-
-            <div class="dress-layout">
-
-
-                <!-- CABALLEROS -->
-
-                <article class="dress-card dress-card--men">
-
-                    <div class="dress-card__number">
-                        01
-                    </div>
-
-                    <h3>
-                        Caballeros
-                    </h3>
-
-                    <div class="dress-line"></div>
-
-                    <p>
-                        Camisa o chacabana acompañada
-                        de pantalón de vestir.
-                    </p>
-
-                    <p class="dress-important">
-                        <strong>Importante:</strong>
-                        agradecemos evitar el color
-                        negro en la camisa o chacabana.
-                    </p>
-
-                </article>
-
-
-                <!-- DAMAS -->
-
-                <article class="dress-card dress-card--women">
-
-                    <div class="dress-card__number">
-                        02
-                    </div>
-
-                    <h3>
-                        Damas
-                    </h3>
-
-                    <div class="dress-line"></div>
-
-                    <p>
-                        Vestimenta formal, acorde con
-                        la elegancia de esta ocasión
-                        tan especial.
-                    </p>
-
-                </article>
-
-            </div>
-
-
-            <div class="important">
-
-                <span class="important__label">
-                    AVISO ESPECIAL
-                </span>
-
-                <p>
-                    Solicitamos evitar los colores
-                    <strong>rojo y rosado</strong>
-                    en todas sus tonalidades, ya que
-                    estarán reservados exclusivamente
-                    para la quinceañera.
-                </p>
-
-            </div>
+          <p class="dress-important">
+            <strong>Importante:</strong>
+            agradecemos evitar el color negro en la camisa
+            o chacabana.
+          </p>
 
         </div>
+
+
+        <div class="dress-card">
+
+          <h3>
+            Damas
+          </h3>
+
+          <p>
+            Vestimenta formal, acorde con la elegancia
+            de esta ocasión tan especial.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="important">
+
+        <strong>Aviso especial</strong><br>
+
+        Solicitamos evitar los colores
+        <strong>rojo y rosado</strong>
+        en todas sus tonalidades, ya que estarán reservados
+        exclusivamente para la quinceañera.
+
+      </div>
 
     </section>
 
 
+    <!-- ===================================================
+         CONFIRMACIÓN
+         =================================================== -->
 
-    <!-- =========================================
-         SECCIÓN 4
-         CONFIRMACIÓN + CUENTA REGRESIVA
-         ========================================= -->
+    <section class="wine reveal-section">
 
-    <section class="wine confirmation-section">
+      <div class="ornament">
+        <span></span>
+      </div>
 
-        <div class="section-inner">
+      <img
+        class="bow-image bow-image--wine"
+        src="images/lazo-3.png"
+        alt=""
+      >
 
+      <h2 class="title">
+        CONFIRMA TU ASISTENCIA
+      </h2>
 
-            <div class="section-intro section-intro--light">
+      <p class="copy">
+        Tu presencia hará esta noche aún más especial.
+      </p>
 
-                <div class="section-number">
-                    04
-                </div>
-
-                <h2 class="title">
-                    CONFIRMA TU
-                    <span>ASISTENCIA</span>
-                </h2>
-
-            </div>
-
-
-            <p class="copy copy--light">
-                Tu presencia hará esta noche aún más especial.
-            </p>
-
-
-            <a
-                class="confirmation-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://wa.me/18297252021?text=Hola%20Dianibel%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Dayla%20Isabella.%20Mi%20nombre%20es%3A%20"
-            >
-
-                <span>
-                    ◉
-                </span>
-
-                CONFIRMAR POR WHATSAPP
-
-                <strong>
-                    →
-                </strong>
-
-            </a>
+      <a
+        class="btn btn-light"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://wa.me/18297252021?text=Hola%20Dianibel%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Dayla%20Isabella.%20Mi%20nombre%20es%3A%20"
+      >
+        ◉ CONFIRMAR POR WHATSAPP
+      </a>
 
 
-            <!-- CUENTA REGRESIVA -->
+      <!-- ===============================================
+           CUENTA REGRESIVA
+           =============================================== -->
 
-            <div class="countdown-heading">
+      <h2
+        class="title countdown-title"
+      >
+        CUENTA REGRESIVA
+      </h2>
 
-                <span>
-                    FALTAN
-                </span>
+      <div class="count">
 
-                <div>
-                    CUENTA REGRESIVA
-                </div>
+        <div>
+          <div
+            class="num"
+            id="days"
+          >
+            --
+          </div>
 
-            </div>
-
-
-            <div class="count">
-
-
-                <div class="count-item">
-
-                    <div
-                        class="num"
-                        id="days"
-                    >
-                        --
-                    </div>
-
-                    <div class="unit">
-                        DÍAS
-                    </div>
-
-                </div>
-
-
-                <div class="count-item">
-
-                    <div
-                        class="num"
-                        id="hours"
-                    >
-                        --
-                    </div>
-
-                    <div class="unit">
-                        HORAS
-                    </div>
-
-                </div>
-
-
-                <div class="count-item">
-
-                    <div
-                        class="num"
-                        id="minutes"
-                    >
-                        --
-                    </div>
-
-                    <div class="unit">
-                        MINUTOS
-                    </div>
-
-                </div>
-
-
-                <div class="count-item">
-
-                    <div
-                        class="num"
-                        id="seconds"
-                    >
-                        --
-                    </div>
-
-                    <div class="unit">
-                        SEGUNDOS
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="script countdown-script">
-                ¡Nos vemos pronto!
-            </div>
-
+          <div class="unit">
+            DÍAS
+          </div>
         </div>
+
+
+        <div>
+          <div
+            class="num"
+            id="hours"
+          >
+            --
+          </div>
+
+          <div class="unit">
+            HORAS
+          </div>
+        </div>
+
+
+        <div>
+          <div
+            class="num"
+            id="minutes"
+          >
+            --
+          </div>
+
+          <div class="unit">
+            MINUTOS
+          </div>
+        </div>
+
+
+        <div>
+          <div
+            class="num"
+            id="seconds"
+          >
+            --
+          </div>
+
+          <div class="unit">
+            SEGUNDOS
+          </div>
+        </div>
+
+      </div>
+
+      <div class="script">
+        ¡Nos vemos pronto!
+      </div>
 
     </section>
 
 
-
-    <!-- =========================================
+    <!-- ===================================================
          CIERRE
-         ========================================= -->
+         =================================================== -->
 
-    <footer class="footer">
+    <footer class="footer reveal-section">
 
-        <div class="footer__content">
+      <img
+        class="monogram"
+        src="images/monograma-db.png"
+        alt="Monograma DB"
+      >
 
-            <div class="footer__ornament">
-                ✦
-            </div>
+      <p class="date">
+        XV · 13.12.2026
+      </p>
 
-            <div class="monogram">
-                DB
-            </div>
+      <p
+        class="copy footer-copy"
+      >
+        Tu presencia será el mejor regalo y hará de esta
+        noche un recuerdo inolvidable.
+      </p>
 
-            <div class="footer__date">
-                XV · 13.12.2026
-            </div>
-
-
-            <p class="copy copy--light footer-copy">
-                Tu presencia será el mejor regalo y hará
-                de esta noche un recuerdo inolvidable.
-            </p>
-
-
-            <p class="copy copy--light footer-copy">
-                Espero contar contigo para celebrar este
-                momento tan especial.
-            </p>
-
-
-            <div class="footer__ornament footer__ornament--bottom">
-                ✦
-            </div>
-
-        </div>
+      <p
+        class="copy footer-copy"
+      >
+        Espero contar contigo para celebrar este momento
+        tan especial.
+      </p>
 
     </footer>
 
 
-    <!-- =========================================
-         BORDE INFERIOR
-         ========================================= -->
-
     <div class="ribbon"></div>
 
+  </main>
 
-</main>
 
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
