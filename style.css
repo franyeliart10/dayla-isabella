@@ -134,7 +134,7 @@ body.locked {
   display: block;
 
   width: min(190px, 65vw);
-  max-height: none;
+  max-height: 130px;
 
   object-fit: contain;
 
