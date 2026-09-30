@@ -1324,7 +1324,7 @@ section {
   /* LAZO DE PORTADA EN CELULAR */
   .cover__bow {
     width: min(310px, 86vw);
-    top: -115px;
+    top: -80px;
   }
 
   .cover__name {
