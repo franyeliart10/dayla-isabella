@@ -132,7 +132,7 @@ body.locked {
   width: min(330px, 82vw);
   height: auto;
 
-  top: 5px;
+  top: -10px;
   left: 50%;
 
   transform: translateX(-50%);
@@ -164,7 +164,7 @@ body.locked {
   letter-spacing: 6px;
   color: var(--tinta);
 
-  margin-bottom: 24px;
+  margin-bottom: 15px;
 }
 
 
@@ -1341,7 +1341,7 @@ section {
 
   .cover__bow {
     width: 290px;
-    top: 5px;
+    top: -10px;
   }
 
   .cover__name {
