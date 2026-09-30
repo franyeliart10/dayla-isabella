@@ -1331,98 +1331,97 @@ section {
   }
 
 }
-/* =========================================================
-   INDICADOR DE MÚSICA EN LA PORTADA
-   ========================================================= */
 
-.music-hint {
+
+/* =========================================
+   REPRODUCTOR DE MÚSICA
+   ========================================= */
+
+.music-player {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  margin: 24px auto 0;
-
-  color: var(--tinta);
-
+  margin: 24px auto 20px;
   cursor: pointer;
-
-  animation: musicHintAppear 1s ease 1.4s both;
+  width: max-content;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-
-/* DISCO */
-
 .music-disc {
-  width: 48px;
-  height: 48px;
-
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-
+  background:
+    radial-gradient(circle at center,
+      #fffaf7 0 10px,
+      #b98a56 11px 13px,
+      #7a1024 14px 31px,
+      #4d2530 32px 36px);
+  border: 2px solid rgba(185, 138, 86, 0.75);
+  box-shadow:
+    0 5px 15px rgba(77, 37, 48, 0.18),
+    0 0 0 5px rgba(185, 138, 86, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background:
-    radial-gradient(
-      circle,
-      #f9e8ec 0 18%,
-      var(--vino) 19% 23%,
-      #4d0a18 24% 68%,
-      var(--dorado) 69% 71%,
-      #681021 72%
-    );
-
-  border: 1px solid var(--dorado);
-
-  box-shadow:
-    0 6px 15px rgba(77, 37, 48, .15);
-
-  animation:
-    musicDiscRotate 5s linear infinite;
-
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.music-disc span {
-  color: #f7dfe5;
-
-  font-size: 16px;
-
-  transform: rotate(-10deg);
+/* Detalle del disco */
+.music-disc::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 250, 247, 0.25);
 }
 
+.music-disc::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fffaf7;
+  border: 2px solid #b98a56;
+}
 
-/* TEXTO */
+.music-disc__center {
+  position: relative;
+  z-index: 2;
+  color: #b98a56;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1;
+}
 
-.music-hint-text {
-  margin-top: 9px;
-
+.music-player__text {
+  margin-top: 11px;
+  color: #7a1024;
+  font-family: "Montserrat", sans-serif;
   font-size: 9px;
-
+  font-weight: 600;
   letter-spacing: 2px;
-
-  opacity: .75;
+  text-align: center;
 }
 
-
-/* EFECTO AL TOCAR */
-
-.music-hint:hover .music-disc {
+/* Al pasar el mouse */
+.music-player:hover .music-disc {
   transform: scale(1.08);
-
   box-shadow:
-    0 9px 22px rgba(77, 37, 48, .22);
+    0 7px 20px rgba(77, 37, 48, 0.22),
+    0 0 0 7px rgba(185, 138, 86, 0.08);
 }
 
+/* Disco girando mientras suena */
+.music-player.playing .music-disc {
+  animation: musicDiscSpin 3.5s linear infinite;
+}
 
-/* ANIMACIONES */
-
-@keyframes musicDiscRotate {
-
+@keyframes musicDiscSpin {
   from {
     transform: rotate(0deg);
   }
@@ -1430,20 +1429,21 @@ section {
   to {
     transform: rotate(360deg);
   }
-
 }
 
+/* Efecto al tocar */
+.music-player:active .music-disc {
+  transform: scale(0.94);
+}
 
-@keyframes musicHintAppear {
-
-  from {
-    opacity: 0;
-    transform: translateY(12px);
+@media (max-width: 480px) {
+  .music-player {
+    margin-top: 20px;
+    margin-bottom: 18px;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .music-disc {
+    width: 68px;
+    height: 68px;
   }
-
 }
