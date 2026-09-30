@@ -16,7 +16,7 @@
 }
 
 
-/* ========================================================= 
+/* =========================================================
    RESET
    ========================================================= */
 
@@ -57,6 +57,7 @@ body.locked {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
+
   transition:
     opacity 1s ease,
     transform 1s ease,
@@ -122,7 +123,44 @@ body.locked {
 }
 
 
+/* =========================================================
+   PORTADA — LAZO GRANDE DETRÁS DEL NOMBRE
+   ========================================================= */
+
+.cover__bow {
+  position: absolute;
+
+  width: min(330px, 82vw);
+  height: auto;
+
+  top: 75px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 1;
+
+  margin: 0;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(
+      0 10px 15px rgba(77, 37, 48, .14)
+    );
+
+  animation: bowFloatCentered 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   TEXTOS DE LA PORTADA
+   ========================================================= */
+
 .cover__kicker {
+  position: relative;
+  z-index: 3;
+
   font-size: 11px;
   letter-spacing: 6px;
   color: var(--tinta);
@@ -131,38 +169,36 @@ body.locked {
 }
 
 
-.cover__bow {
-  position: absolute;
-  z-index: 1;
-  width: min(330px, 82vw);
-  max-height: none;
-  height: auto;
-  left: 50%;
-  top: -20;
-  transform: translateX(-50%);
-  margin: 0;
-  pointer-events: none;
-  filter: drop-shadow(0 8px 12px rgba(77, 37, 48, .12));
-}
-
-
-
 .cover__name {
+  position: relative;
+  z-index: 3;
+
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(62px, 15vw, 82px);
   font-weight: 600;
+
   line-height: .85;
   letter-spacing: 2px;
+
   color: var(--vino);
 
-margin-top: 95px;
+  /*
+    El nombre comienza aproximadamente
+    en la mitad del lazo.
+  */
+  margin-top: 115px;
 }
 
 
 .cover__surname {
+  position: relative;
+  z-index: 3;
+
   font-family: "Great Vibes", cursive;
   font-size: clamp(52px, 13vw, 72px);
+
   line-height: 1;
+
   color: var(--rosa);
 
   margin-top: 4px;
@@ -170,9 +206,13 @@ margin-top: 95px;
 
 
 .cover__surname--second {
+  position: relative;
+  z-index: 3;
+
   font-family: "Cormorant Garamond", serif;
   font-size: 17px;
   font-weight: 600;
+
   letter-spacing: 4px;
 
   margin-top: 14px;
@@ -180,6 +220,9 @@ margin-top: 95px;
 
 
 .cover__pearls {
+  position: relative;
+  z-index: 3;
+
   display: flex;
   justify-content: center;
   gap: 7px;
@@ -208,8 +251,12 @@ margin-top: 95px;
 
 
 .cover__phrase {
+  position: relative;
+  z-index: 3;
+
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
+
   letter-spacing: 2px;
 
   margin-top: 25px;
@@ -217,6 +264,9 @@ margin-top: 95px;
 
 
 .cover__date {
+  position: relative;
+  z-index: 3;
+
   font-size: 12px;
   letter-spacing: 4px;
 
@@ -230,9 +280,12 @@ margin-top: 95px;
 
 .cover__decor {
   position: absolute;
+
   width: 170px;
   height: 260px;
+
   opacity: .45;
+
   pointer-events: none;
 }
 
@@ -240,6 +293,7 @@ margin-top: 95px;
 .cover__decor::before,
 .cover__decor::after {
   content: "";
+
   position: absolute;
 
   width: 100%;
@@ -264,6 +318,7 @@ margin-top: 95px;
 .cover__decor--left {
   left: -50px;
   top: 7%;
+
   transform: rotate(-22deg);
 }
 
@@ -271,6 +326,7 @@ margin-top: 95px;
 .cover__decor--right {
   right: -50px;
   bottom: 7%;
+
   transform: rotate(158deg);
 }
 
@@ -280,7 +336,11 @@ margin-top: 95px;
    ========================================================= */
 
 .open-button {
+  position: relative;
+  z-index: 3;
+
   appearance: none;
+
   border: 1px solid var(--dorado);
 
   background:
@@ -318,6 +378,7 @@ margin-top: 95px;
 
 .open-button:hover {
   transform: translateY(-3px);
+
   letter-spacing: 2.5px;
 
   box-shadow:
@@ -418,6 +479,7 @@ section,
 .hero::before {
   left: -28px;
   top: 20px;
+
   transform: rotate(-22deg);
 }
 
@@ -425,6 +487,7 @@ section,
 .hero::after {
   right: -28px;
   bottom: 20px;
+
   transform: rotate(158deg);
 }
 
@@ -556,6 +619,7 @@ section,
 .pearls {
   display: flex;
   justify-content: center;
+
   gap: 7px;
 
   margin: 18px auto;
@@ -648,6 +712,7 @@ section {
 
 .note {
   font-size: 11px;
+
   letter-spacing: 1.5px;
   line-height: 1.7;
 }
@@ -823,6 +888,7 @@ section {
 
 .card:hover {
   transform: translateY(-5px);
+
   background: #ffffff15;
 }
 
@@ -834,7 +900,9 @@ section {
 
 .label {
   font-size: 10px;
+
   letter-spacing: 2px;
+
   margin-top: 7px;
 }
 
@@ -1027,6 +1095,7 @@ section {
 
 .unit {
   font-size: 8px;
+
   letter-spacing: 1px;
 }
 
@@ -1086,6 +1155,7 @@ section {
 
 .reveal-section {
   opacity: 0;
+
   transform: translateY(45px);
 
   transition:
@@ -1096,6 +1166,7 @@ section {
 
 .reveal-section.visible {
   opacity: 1;
+
   transform: translateY(0);
 }
 
@@ -1123,12 +1194,40 @@ section {
 
   from {
     opacity: 0;
-    transform: scale(.75) translateY(-15px);
+
+    transform:
+      scale(.75)
+      translateY(-15px);
   }
 
   to {
     opacity: 1;
-    transform: scale(1) translateY(0);
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   MOVIMIENTO DEL LAZO DE LA PORTADA
+   ========================================================= */
+
+@keyframes bowFloatCentered {
+
+  0%,
+  100% {
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateX(-50%)
+      translateY(-6px);
   }
 
 }
@@ -1222,6 +1321,16 @@ section {
     bottom: 12px;
   }
 
+  /* LAZO DE PORTADA EN CELULAR */
+  .cover__bow {
+    width: min(310px, 86vw);
+    top: 80px;
+  }
+
+  .cover__name {
+    margin-top: 110px;
+  }
+
 }
 
 
@@ -1232,11 +1341,13 @@ section {
   }
 
   .cover__bow {
-    width: 155px;
+    width: 290px;
+    top: 78px;
   }
 
   .cover__name {
     font-size: 58px;
+    margin-top: 105px;
   }
 
   .cover__surname {
@@ -1256,89 +1367,149 @@ section {
 
 .music-player {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
+
   margin: 24px auto 20px;
+
   cursor: pointer;
+
   width: max-content;
+
   user-select: none;
+
   -webkit-tap-highlight-color: transparent;
 }
+
 
 .music-disc {
   width: 72px;
   height: 72px;
+
   border-radius: 50%;
+
   background:
-    radial-gradient(circle at center,
+    radial-gradient(
+      circle at center,
       #fffaf7 0 10px,
       #b98a56 11px 13px,
       #7a1024 14px 31px,
-      #4d2530 32px 36px);
-  border: 2px solid rgba(185, 138, 86, 0.75);
+      #4d2530 32px 36px
+    );
+
+  border:
+    2px solid rgba(185, 138, 86, 0.75);
+
   box-shadow:
     0 5px 15px rgba(77, 37, 48, 0.18),
     0 0 0 5px rgba(185, 138, 86, 0.08);
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
+
 /* Detalle del disco */
+
 .music-disc::before {
   content: "";
+
   position: absolute;
+
   inset: 9px;
+
   border-radius: 50%;
-  border: 1px solid rgba(255, 250, 247, 0.25);
+
+  border:
+    1px solid rgba(255, 250, 247, 0.25);
 }
+
 
 .music-disc::after {
   content: "";
+
   position: absolute;
+
   width: 8px;
   height: 8px;
+
   border-radius: 50%;
+
   background: #fffaf7;
-  border: 2px solid #b98a56;
+
+  border:
+    2px solid #b98a56;
 }
+
 
 .music-disc__center {
   position: relative;
+
   z-index: 2;
+
   color: #b98a56;
-  font-family: "Cormorant Garamond", serif;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
   font-size: 18px;
+
   line-height: 1;
 }
 
+
 .music-player__text {
   margin-top: 11px;
+
   color: #7a1024;
-  font-family: "Montserrat", sans-serif;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
   font-size: 9px;
+
   font-weight: 600;
+
   letter-spacing: 2px;
+
   text-align: center;
 }
 
+
 /* Al pasar el mouse */
+
 .music-player:hover .music-disc {
   transform: scale(1.08);
+
   box-shadow:
     0 7px 20px rgba(77, 37, 48, 0.22),
     0 0 0 7px rgba(185, 138, 86, 0.08);
 }
 
+
 /* Disco girando mientras suena */
+
 .music-player.playing .music-disc {
-  animation: musicDiscSpin 3.5s linear infinite;
+  animation:
+    musicDiscSpin 3.5s linear infinite;
 }
 
+
 @keyframes musicDiscSpin {
+
   from {
     transform: rotate(0deg);
   }
@@ -1346,14 +1517,19 @@ section {
   to {
     transform: rotate(360deg);
   }
+
 }
 
+
 /* Efecto al tocar */
+
 .music-player:active .music-disc {
   transform: scale(0.94);
 }
 
+
 @media (max-width: 480px) {
+
   .music-player {
     margin-top: 20px;
     margin-bottom: 18px;
@@ -1362,84 +1538,6 @@ section {
   .music-disc {
     width: 68px;
     height: 68px;
-  }
-}
-/* =========================================================
-   PORTADA — LAZO GRANDE DETRÁS DEL NOMBRE
-   ========================================================= */
-
-.cover__content {
-  position: relative;
-  z-index: 3;
-}
-
-/* El lazo queda centrado y detrás de las letras */
-.cover__bow {
-  position: absolute;
-
-  width: min(330px, 82vw);
-  height: auto;
-
-  top: 105px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  z-index: 1;
-
-  margin: 0;
-
-  opacity: 1;
-
-  filter:
-    drop-shadow(0 10px 15px rgba(77, 37, 48, .14));
-
-  animation: bowFloatCentered 4s ease-in-out infinite;
-}
-
-/* El texto queda por encima del lazo */
-.cover__name,
-.cover__surname,
-.cover__surname--second,
-.cover__kicker,
-.cover__pearls,
-.cover__phrase,
-.cover__date,
-.open-button {
-  position: relative;
-  z-index: 3;
-}
-
-
-/* El nombre empieza aproximadamente en el centro del lazo */
-.cover__name {
-  margin-top: 135px;
-}
-
-
-/* Animación sin que el lazo se vaya hacia los lados */
-@keyframes bowFloatCentered {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(-6px);
-  }
-}
-
-
-/* Ajuste para celulares */
-@media (max-width: 480px) {
-
-  .cover__bow {
-    width: min(310px, 86vw);
-    top: 105px;
-  }
-
-  .cover__name {
-    margin-top: 130px;
   }
 
 }
