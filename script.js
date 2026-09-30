@@ -119,96 +119,36 @@ if (openInvitation) {
 }
 
 
-/* =========================================================
+/* =========================================
    MÚSICA
-   ========================================================= */
+   ========================================= */
 
-function setMusicState(isPlaying) {
+const bgMusic = document.getElementById("bgMusic");
+const musicPlayer = document.getElementById("musicPlayer");
 
-  if (!musicButton) {
-    return;
-  }
+if (bgMusic && musicPlayer) {
 
-  musicButton.classList.toggle(
-    "playing",
-    isPlaying
-  );
+  musicPlayer.addEventListener("click", async () => {
 
-  musicButton.setAttribute(
-    "aria-pressed",
-    String(isPlaying)
-  );
+    try {
 
-  const musicText =
-    musicButton.querySelector(".music-text");
+      if (bgMusic.paused) {
+        await bgMusic.play();
+        musicPlayer.classList.add("playing");
+      } else {
+        bgMusic.pause();
+        musicPlayer.classList.remove("playing");
+      }
 
-  if (musicText) {
-
-    musicText.textContent =
-      isPlaying
-        ? "MÚSICA"
-        : "SONIDO";
-
-  }
-
-}
-
-
-async function toggleMusic() {
-
-  if (!backgroundMusic) {
-    return;
-  }
-
-  try {
-
-    if (backgroundMusic.paused) {
-
-      await backgroundMusic.play();
-
-      setMusicState(true);
-
-    } else {
-
-      backgroundMusic.pause();
-
-      setMusicState(false);
-
+    } catch (error) {
+      console.log("No se pudo reproducir la música:", error);
     }
 
-  } catch (error) {
+  });
 
-    console.log(
-      "No fue posible reproducir la música.",
-      error
-    );
-
-  }
-
-}
-
-
-if (musicButton) {
-
-  musicButton.addEventListener(
-    "click",
-    toggleMusic
-  );
-
-}
-
-
-if (backgroundMusic) {
-
-  backgroundMusic.addEventListener(
-    "play",
-    () => setMusicState(true)
-  );
-
-  backgroundMusic.addEventListener(
-    "pause",
-    () => setMusicState(false)
-  );
+  bgMusic.addEventListener("ended", () => {
+    musicPlayer.classList.remove("playing");
+  });
 
 }
 
@@ -556,43 +496,6 @@ if (musicButton) {
 
   musicButton.classList.remove(
     "visible"
-  );
-
-}
-/* =========================================================
-   INDICADOR DE MÚSICA DE LA PORTADA
-   ========================================================= */
-
-const musicHint =
-  document.getElementById("musicHint");
-
-
-if (musicHint) {
-
-  musicHint.addEventListener(
-    "click",
-    async () => {
-
-      if (!backgroundMusic) {
-        return;
-      }
-
-      try {
-
-        await backgroundMusic.play();
-
-        setMusicState(true);
-
-      } catch (error) {
-
-        console.log(
-          "No fue posible reproducir la música.",
-          error
-        );
-
-      }
-
-    }
   );
 
 }
