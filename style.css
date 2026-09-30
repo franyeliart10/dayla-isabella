@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
 
 
 /* =========================================================
@@ -1328,6 +1328,122 @@ section {
 
   .open-button {
     padding: 14px 23px;
+  }
+
+}
+/* =========================================================
+   INDICADOR DE MÚSICA EN LA PORTADA
+   ========================================================= */
+
+.music-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 24px auto 0;
+
+  color: var(--tinta);
+
+  cursor: pointer;
+
+  animation: musicHintAppear 1s ease 1.4s both;
+}
+
+
+/* DISCO */
+
+.music-disc {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      #f9e8ec 0 18%,
+      var(--vino) 19% 23%,
+      #4d0a18 24% 68%,
+      var(--dorado) 69% 71%,
+      #681021 72%
+    );
+
+  border: 1px solid var(--dorado);
+
+  box-shadow:
+    0 6px 15px rgba(77, 37, 48, .15);
+
+  animation:
+    musicDiscRotate 5s linear infinite;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+.music-disc span {
+  color: #f7dfe5;
+
+  font-size: 16px;
+
+  transform: rotate(-10deg);
+}
+
+
+/* TEXTO */
+
+.music-hint-text {
+  margin-top: 9px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  opacity: .75;
+}
+
+
+/* EFECTO AL TOCAR */
+
+.music-hint:hover .music-disc {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 9px 22px rgba(77, 37, 48, .22);
+}
+
+
+/* ANIMACIONES */
+
+@keyframes musicDiscRotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+@keyframes musicHintAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 
 }
