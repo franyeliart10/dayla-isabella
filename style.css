@@ -133,31 +133,16 @@ body.locked {
 
 .cover__bow {
   position: absolute;
-
   z-index: 1;
-
   width: min(330px, 82vw);
   max-height: none;
-
-  object-fit: contain;
-
+  height: auto;
   left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -55%);
-
+  top: 115px;
+  transform: translateX(-50%);
   margin: 0;
-
-  opacity: .95;
-
-  filter:
-    drop-shadow(
-      0 10px 16px rgba(77, 37, 48, .12)
-    );
-
-  animation:
-    bowFloat 4s ease-in-out infinite,
-    bowAppear 1.2s ease .25s both;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 12px rgba(77, 37, 48, .12));
 }
 
 
@@ -169,7 +154,7 @@ body.locked {
   letter-spacing: 2px;
   color: var(--vino);
 
-  margin-top: 12px;
+margin-top: 95px;
 }
 
 
