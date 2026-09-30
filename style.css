@@ -146,6 +146,7 @@ body.locked {
 }
 
 
+
 .cover__name {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(62px, 15vw, 82px);
